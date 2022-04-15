@@ -7,7 +7,7 @@ const Shipment = () => {
   const [address, setAddress] = useState("");
   const [phone, setPhone] = useState("");
 
-const [user] = useAuthState(auth)
+  const [user] = useAuthState(auth);
 
   const handleNameBlur = (e) => {
     setName(e.target.value);
@@ -25,7 +25,13 @@ const [user] = useAuthState(auth)
         <form>
           <div className="input-group">
             <label htmlFor="email">Email</label>
-            <input type="email" name="email" id="" required />
+            <input
+              value={user?.email}
+              readOnly
+              type="email"
+              name="email"
+              id=""
+            />
           </div>
           <div className="input-group">
             <label htmlFor="text">Name</label>
