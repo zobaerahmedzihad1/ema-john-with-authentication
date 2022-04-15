@@ -13,7 +13,7 @@ const Login = () => {
   const from = location.state?.from?.pathname || "/";
 
   const [signInWithEmailAndPassword, user, loading, error] =
-    useSignInWithEmailAndPassword(auth);
+    useSignInWithEmailAndPassword(auth) 
 
   const handleEmailBlur = (e) => {
     setEmail(e.target.value);
